@@ -40,9 +40,8 @@ class HttpUtil {
 
       return handler.next(options);
     }, onResponse: (response, handler) {
-      print("========================请求数据===================");
+      print("========================请求数据返回===================");
       print("code=${response.statusCode}");
-
       if (response.statusCode! < 200 || response.statusCode! >= 300) {
         if (response.statusCode == 403) {
           Application.navigatorKey.currentState?.pushNamed(Routers.login);
